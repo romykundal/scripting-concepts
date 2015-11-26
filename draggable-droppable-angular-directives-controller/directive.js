@@ -3,7 +3,7 @@
  ***/
 
 // Route State Load Spinner(used on page or content load)
-NutripyApp.directive('ngSpinnerBar', ['$rootScope',
+App.directive('ngSpinnerBar', ['$rootScope',
     function ($rootScope) {
         return {
             link: function (scope, element, attrs) {
@@ -42,7 +42,7 @@ NutripyApp.directive('ngSpinnerBar', ['$rootScope',
 ])
 
 // Handle global LINK click
-NutripyApp.directive('a',
+App.directive('a',
         function () {
             return {
                 restrict: 'E',
@@ -85,7 +85,7 @@ function isInArray(value, array) {
 }
 
 /************Draggable directiveto any elements div and li tags ************/
-NutripyApp.directive('draggalehtml', function ($compile) {
+App.directive('draggalehtml', function ($compile) {
     return {
       restrict:    'AE',
       //scope:       false,//{ recipes: '=draggalehtml' },
@@ -119,7 +119,7 @@ NutripyApp.directive('draggalehtml', function ($compile) {
     
 });
 
-NutripyApp.directive('draggale', function ($compile) {
+App.directive('draggale', function ($compile) {
      return {
       restrict: "A",
       link: function(scope, element, attrs) {
@@ -138,14 +138,14 @@ NutripyApp.directive('draggale', function ($compile) {
 
 
 /************ Droppable Start html create dyinamic *********************/
-NutripyApp.directive("addbuttonsbutton", function(){
+App.directive("addbuttonsbutton", function(){
 	return {
 		restrict: "E",
 		template: '<button addday type="button" class="btn btn-warning" >Plan <i class="fa fa-table" ></i></button>'
 	}
 });
 
-NutripyApp.directive("addday", function($compile){
+App.directive("addday", function($compile){
     return {
       restrict:    'A',
       link:  function(scope, element, attrs){
@@ -207,7 +207,7 @@ NutripyApp.directive("addday", function($compile){
 });
 
 // Start Making Draggable directive to any elements td and div tags
-NutripyApp.directive('droppable', function () {
+App.directive('droppable', function () {
     return {
         restrict: "A",
         link: function (scope, element, attrs) {
@@ -265,13 +265,13 @@ NutripyApp.directive('droppable', function () {
 
 // End Making Draggable directive to any elements td and div tags
 /************ Trash Button for delete recipe element from dish type sction in day td *********************/
-NutripyApp.directive("trashrecipebutton", function(){
+App.directive("trashrecipebutton", function(){
 	return {
 		restrict: "E",
 		template: '<i class="glyphicon glyphicon-trash" deleteElement></i>'
 	}
 });
-NutripyApp.directive("deleteElement", function($compile){
+App.directive("deleteElement", function($compile){
     return {
       restrict:    'A',
       link:  function(scope, element, attrs){
@@ -284,7 +284,7 @@ NutripyApp.directive("deleteElement", function($compile){
     };
 });
 
-NutripyApp.directive('droppableEdit', function () {
+App.directive('droppableEdit', function () {
     return {
         restrict: "A",
         link: function (scope, element, attrs) {

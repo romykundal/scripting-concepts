@@ -1,4 +1,4 @@
-NutripyApp.controller('dragdropCtrl', function ($state, $http, Upload, $rootScope, $timeout, $scope, Config, MealPlanCollection, recipeCollection, DishTypeCollection, toaster, toasterOptions) {
+App.controller('dragdropCtrl', function ($state, $http, Upload, $rootScope, $timeout, $scope, Config, MealPlanCollection, recipeCollection, DishTypeCollection, toaster, toasterOptions) {
     
     $scope.getRecipes = function () {
         recipeCollection.get().$promise.then(function (res) {
